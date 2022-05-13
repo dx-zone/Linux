@@ -1,0 +1,6 @@
+# Find a match and add new line then add the following two lines with the parameters wanted
+# Match: config.vm.box = "centos-stream-8"
+# First line to add: Blank
+# Second line to add: # Path to the private key SSH into the guest machine"
+# Third line to add: config.ssh.private_key_path = "./keys/id_rsa"
+sed -i '/config.vm.box = "centos-stream-8"/ a \\n \ # Path to the private key SSH into the guest machine"\n  config.ssh.private_key_path = ".\/keys\/id_rsa"' Vagrantfile

@@ -57,6 +57,4 @@ echo "Modulated/Remainder a%b = $result"
 echo "Current a = $((result=a++)) | Remember, the a++ increment will take effect after resolving the value of the variable a, which is 8 in this case"
 echo "Incremented a = $a | This lines follows the previous expression '((result=a++))' where a++ has been incremented"
 
-echo "Incremented b = $((result=++b)) | This line is to demonstrate the ++b increments happens immediately"
-
-echo ""
+echo -e "Incremented b = $((result=++b)) | This line is to demonstrate the ++b increments happens immediately \n"

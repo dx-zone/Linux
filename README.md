@@ -2,7 +2,7 @@
 
 
 
-This is a collection of scripts, tips and how-tos for Linux and BASH scripts.
+This is a collection of scripts, tips and how-tos for Linux and BASH.
 
 
 

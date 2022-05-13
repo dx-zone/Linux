@@ -72,7 +72,7 @@ EOF
 
 source ~/.bashrc
 
-# To revert the changes, uncomment the line below or copy and paste it in your terminal
+# To revert the changes, uncomment the line below or copy and paste it in your terminal without the # symbol
 # cat /etc/skel/.bashrc > ~/.bashrc ; source ~/.bashrc ; rm -fr ~/.git-completion
 
 ```

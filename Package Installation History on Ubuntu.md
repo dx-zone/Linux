@@ -5,9 +5,7 @@
 **Packages installed through APT**
 
 ```bash
-sudo apt-install curl -y
-sudo apt install wget -y
-
+sudo apt install curl wget terminator ipcalc sipcalc sipcalc irpas arp-scan nmap vim-gui-common vim-runtime -y
 ```
 
 

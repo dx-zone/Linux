@@ -76,3 +76,34 @@ source ~/.bashrc
 # cat /etc/skel/.bashrc > ~/.bashrc ; source ~/.bashrc ; rm -fr ~/.git-completion
 
 ```
+
+
+
+#### Add sudo privileges and skip the password prompt for the current user logged in the terminal
+
+The following code will generate a file at `/etc/sudoers.d/dont-prompt-$USER-for-sudo-password` with the parameters to provide sudo privileges and skipping password prompt to the current user logged in the terminal.  The current user logged will be determined based on the environment variable USER. Echo this variable in case you need to know which user is currently logged in the terminal like so: `echo $USER`
+
+```bash
+sudo echo "$USER ALL=(ALL:ALL) NOPASSWD: ALL" | sudo tee "/etc/sudoers.d/dont-prompt-$USER-for-sudo-password"
+```
+
+
+
+### Set vi/vim color scheme like Sublime/Monokai
+
+```bash
+sudo apt-get install vim-gui-common vim-runtime -y
+
+mkdir -p ~/.vim/colors
+
+# Maintainer: Erich Gubler (erichdongubler)
+# URL: https://github.com/erichdongubler/vim-sublime-monokai
+# License:    MIT
+curl https://raw.githubusercontent.com/erichdongubler/vim-sublime-monokai/master/colors/sublimemonokai.vim -o ~/.vim/colors/sublimemonokai.vim
+
+cat << EOF > ~/.vimrc
+set number
+syntax on
+colorscheme sublimemonokai
+EOF
+```

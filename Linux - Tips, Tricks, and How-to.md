@@ -308,3 +308,16 @@ https://www.cyberciti.biz/faq/add-new-user-account-with-admin-access-on-linux/
 https://www.howtogeek.com/116032/how-to-encrypt-your-home-folder-after-installing-ubuntu/
 
 https://vitux.com/4-ways-to-log-out-of-a-ubuntu-desktop-session/#:~:text=Open%20the%20Ubuntu%20command%20line,Ctrl%2BAlt%2BT%20shortcut.&text=When%20you%20run%20this%20command,clicking%20the%20Log%20Out%20button.
+
+**How to Make Keyboard Works Like OSX System Wide**
+
+If you install the `xautomation` package, you can add a command in System → *Preferences* → *Keyboard Shortcuts* → *Custom* like:
+
+```bash
+sudo apt install xautomation
+
+# System → *Preferences* → *Keyboard Shortcuts* → *Custom* like:
+# xte "keyup Meta_L" "keyup Meta_R" "keyup c" "keydown Control_L" "key c" "keyup Control_L"
+
+```
+

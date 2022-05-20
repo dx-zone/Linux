@@ -12,7 +12,6 @@ Copy and paste the code below in your BASH terminal. This will download `git-com
 
 ```bash
 #!/usr/bin/env bash
-# Script: favorite_bashrc_setup.sh
 # Author: Daniel Cruz
 
 #######################################################
@@ -105,5 +104,5 @@ cat << EOF > ~/.vimrc
 set number
 syntax on
 colorscheme sublimemonokai
-EOF
+EOFcp -a 
 ```

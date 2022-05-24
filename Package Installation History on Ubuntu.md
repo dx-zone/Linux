@@ -5,7 +5,7 @@
 **Packages installed through APT**
 
 ```bash
-sudo apt install curl wget terminator ipcalc sipcalc sipcalc irpas arp-scan nmap vim-gui-common vim-runtime build-essential xautomation -y
+sudo apt install curl wget terminator ipcalc sipcalc sipcalc irpas arp-scan nmap vim-gui-common vim-runtime build-essential xautomation python3 -y
 ```
 
 
@@ -61,6 +61,15 @@ $ $reset"
 EOF
 ```
 
+
+
+**Git**
+
+```bash
+sudo add-apt-repository ppa:git-core/ppa -y
+sudo apt update -y
+sudo apt install git -y
+```
 
 
 **Sublime**
@@ -190,6 +199,14 @@ sudo mokutil --import VMWARE_WORKSTATION_16_PRO.der
 mokutil --test-key VMWARE_WORKSTATION_16_PRO.der
 
 # You should get `VMWARE_WORKSTATION_16_PRO.der is already enrolled` and that means VMWare should be working.
+
+```
+
+
+**JupyterLab**
+
+```bash
+pip install jupyterlab
 
 ```
 

@@ -15,7 +15,6 @@ function show_vars
   echo ${arr[@]}
   var='C Programming in easy steps'
 }
-
 show_vars
 
 function show_params

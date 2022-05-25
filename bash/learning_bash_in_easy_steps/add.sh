@@ -17,3 +17,5 @@ function add
     echo "$a + $b = $(( a + b ))"
   fi
 }
+
+add

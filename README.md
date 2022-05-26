@@ -38,6 +38,7 @@ alias l='ls -CF'
 alias rm='rm -i'
 alias now='date +%H:%M'
 alias conn='ssh -l root'
+alias sshin='ssh -l root'
 alias tree='tree -Cl'
 
 EOF

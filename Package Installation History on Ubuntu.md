@@ -5,7 +5,15 @@
 **Packages installed through APT**
 
 ```bash
-sudo apt install curl wget terminator ipcalc sipcalc sipcalc irpas arp-scan nmap vim-gui-common vim-runtime build-essential xautomation python3 -y
+sudo apt install curl wget terminator ipcalc sipcalc sipcalc irpas arp-scan nmap vim-gui-common vim-runtime build-essential xautomation tree python3 python3-venv -y
+```
+
+
+
+**Python Modules**
+
+```bash
+pip install jupyterlab lxml
 ```
 
 
@@ -25,6 +33,8 @@ alias l='ls -CF'
 alias rm='rm -i'
 alias now='date +%H:%M'
 alias conn='ssh -l root'
+alias sshin='ssh -l root'
+alias tree='tree -Cl'
 
 EOF
 

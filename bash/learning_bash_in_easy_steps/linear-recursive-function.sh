@@ -1,8 +1,7 @@
 #!/bin/bash
 clear
 
-echo -e "Using a recursive function to call itself to execute a statemnt it contains.\n:wq
-"
+echo -e "Using a recursive function to call itself to execute a statemnt it contains.\n"
 
 for (( i = 1; i < 65; i++ ))
 {

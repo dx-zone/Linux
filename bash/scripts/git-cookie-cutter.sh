@@ -16,7 +16,7 @@
 # 5) Take a snapshot of the file (save current state with git commit -am 'adding X file)  
 # 6) Edit the file with vi
 #
-alias cutter='read x; touch $x; chmod +111 $x; git add $x; git commit -am "adding $x"; vi $x'
+alias cutter='read -p "Enter a filename. Example: my_script.sh: " x; touch $x; chmod +111 $x; git add $x; git commit -am "adding $x"; vi $x'
 
 echo -e "Alias set with the keyword 'cutter'.\nType 'unset cutter' anytime you need to get rid of the alias."
 echo -e "Type 'type cutter' anytime you want to find what the alias does."

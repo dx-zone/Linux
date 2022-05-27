@@ -18,13 +18,15 @@
 #
 alias cutter='read x; touch $x; chmod +111 $x; git add $x; git commit -am "adding $x"; vi $x'
 
-echo -e "Alias set with the keyword 'cutter'.\nType 'unset cutter' anytime you need to get rid of the alias.\n"
+echo -e "Alias set with the keyword 'cutter'.\nType 'unset cutter' anytime you need to get rid of the alias."
+echo -e "Type 'type cutter' anytime you want to find what the alias does."
+echo -e "Type 'cutter' anytime you want to do the following workflow.\n"
 
-echo -e "1. The 'cutter' command will do the following:"
-echo -e "2. Prompt for a filename to be created"
-echo -e "3. Create that filename"
-echo -e "4. Make that filename executable"
-echo -e "5. git add 'filename'"
-echo -e "6. git commit -am 'filename'"
-echo -e "7. vi 'filename'"
-echo -e "\n"
+echo -e "The 'cutter' command will do the following:"
+echo -e "1. Prompt for a filename to be created"
+echo -e "2. Create that filename"
+echo -e "3. Make that filename executable"
+echo -e "4. git add 'filename'"
+echo -e "5. git commit -am 'filename'"
+echo -e "6. vi 'filename'\n"
+echo -e "Enjoy!\n"

@@ -111,13 +111,20 @@ uname -ar
 
 
 
-#### Enabling Vi/VIM Syntax Colors and Highlighting
+#### Enabling VI/VIM Syntax Colors and Highlighting
 
-Vi/VIM can be set to highlight syntax colors, line numbering, and much more, just like modern code editors. The following vi commands are a good starting point to turn on highlighting, color and numbering.
+Vi/VIM can be set to highlight syntax colors, line numbering, and much more, just like modern code editors. The following vi commands are a good starting point to turn on highlighting, color and numbering. Linux usually comes with a tiny version of vim and so the full version needs to be installed for the syntax and the highlight to work.
 
 ```bash
+# Check which type of vim is installed
+readlink -f `which vi`
+#/usr/bin/vim.tiny #default
+
+sudo apt install vim # install the full version of VIM
 sudo apt-get install vim-gui-common
 sudo apt-get install vim-runtime
+readlink -f `which vi`
+#/usr/bin/vim.basic # should look like these after installing the full vim
 
 vi test
 :version

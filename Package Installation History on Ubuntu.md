@@ -5,7 +5,7 @@
 **Packages installed through APT**
 
 ```bash
-sudo apt install curl wget terminator ipcalc sipcalc sipcalc irpas arp-scan nmap vim-gui-common vim-runtime build-essential xautomation tree python3 python3-pip python3-venv -y
+sudo apt install curl wget terminator ipcalc sipcalc sipcalc irpas arp-scan nmap vim vim-gui-common vim-runtime build-essential xautomation tree python3 python3-pip python3-venv -y
 ```
 
 

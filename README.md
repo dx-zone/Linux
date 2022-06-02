@@ -6,13 +6,44 @@ This is a collection of scripts, tips and how-tos for Linux and BASH.
 
 
 
-#### Customizing the BASH prompt for Git completion & prompt
+#### Colorized your BASH shell prompt to reflect your current git branch repos you are working at and colorized you vi/vim editor to look like SublimeText with Monokai like color scheme.
 
-Copy and paste the code below in your BASH terminal. This will download `git-completion.bash` and `git-prompt.sh` and store them in your home directory `~/.git-completion`. Then the `~/.bashrc` will be modified to load these and change the BASH prompt.
+
+This script will turn your vi/vim to look like if your were editing code in SublimeText with Monokai color scheme like. In addition, it will colorized your shell prompt to reflects your git branch when working on directories that holds git repos. Be aware, there are some custom alias in the following scripts. Is up to you if you want to keep them or add whatever you like.
+
+
+
+**Requirements**
+
+* **Debian** based **Linux** distributions will require full `vim` version (not the tiny version that gets shipped with most Linux distros) and the related vim common tools, plus, `wget` to download additional scripts.
+
+  ```bash
+  readlink -f `which vi` # This will tell which vi/vim version is installed, it should be vim.tiny in most cases.
+  
+  sudo apt install vim vim-gui-common vim-runtime wget -y
+  
+  readlink -f `which vi` # This will tell which vi/vim version is installed, it should be vim.basic after installing vi/vim full version
+  ```
+
+* Mac OX X will require wget, and such, we are including instructions to install it with `brew`.
+
+  ```bash
+  /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+  
+  brew install wget
+  ```
+
+  
+
+Copy and paste the following code below in your BASH terminal. This will download `git-completion.bash` and `git-prompt.sh` and store them in your home directory at `~/.git-completion`. Then the `~/.bashrc` will be modified to load these and change the BASH prompt.
+
+
 
 ```bash
 #!/usr/bin/env bash
-# Author: Daniel Cruz
+# Purpose: Colorized BASH shell prompt to reflects current git branch being worked at and colorized vi/vim to look like SublimeText with Monokai color scheme.
+# Author: Daniel Cruz <daniel@mydatacenter.io>
+# Last updated on : 2-Jun-2022
 
 #######################################################
 # Downloading the Git completion & Git prompt scripts #

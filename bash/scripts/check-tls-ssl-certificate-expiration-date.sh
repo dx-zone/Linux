@@ -5,9 +5,10 @@
 # Last updated on : 17-May-2022
 
 SERVER_NAME=$(hostname -f)
-PORT:443
+PORT=443
 OPENSSL_DIR=$(openssl version -d)
 
 echo -e "Certificate directory: $OPENSSL_DIR"
 openssl s_client -servername {SERVER_NAME} -connect {SERVER_NAME}:{PORT} | openssl x509 -noout -dates
 echo | openssl s_client -servername {SERVER_NAME} -connect {SERVER_NAME}:{PORT} | openssl x509 -noout -dates
+

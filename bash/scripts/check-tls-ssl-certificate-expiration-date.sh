@@ -10,5 +10,6 @@ OPENSSL_DIR=$(openssl version -d)
 
 echo -e "Certificate directory: $OPENSSL_DIR"
 openssl s_client -servername {SERVER_NAME} -connect {SERVER_NAME}:{PORT} | openssl x509 -noout -dates
-echo | openssl s_client -servername {SERVER_NAME} -connect {SERVER_NAME}:{PORT} | openssl x509 -noout -dates
 
+echo "Connecting to localhost:443 to check SSL/TLS certificate expiration"
+openssl s_client -connect localhost:443 2>/dev/null | openssl x509 -noout -dates

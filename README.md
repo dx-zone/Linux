@@ -48,8 +48,8 @@ Copy and paste the following code below in your BASH terminal. This will downloa
 #######################################################
 # Downloading the Git completion & Git prompt scripts #
 #######################################################
-wget https://raw.githubusercontent.com/dx-zone/BASH/main/bachrc/git-prompt.sh -P ~/.git-completion
-wget https://raw.githubusercontent.com/dx-zone/BASH/main/bachrc/git-completion.bash -P ~/.git-completion
+wget https://raw.githubusercontent.com/dx-zone/Linux/main/bachrc/git-prompt.sh -P ~/.git-completion
+wget https://raw.githubusercontent.com/dx-zone/Linux/main/bachrc/git-completion.bash -P ~/.git-completion
 
 rm -f ~/.wget-hsts
 

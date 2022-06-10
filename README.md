@@ -55,6 +55,9 @@ rm -f ~/.wget-hsts
 
 sleep 3
 
+### Backup existing .bashrc file
+cp ~/.bashrc ~/.bashrc.bak
+
 ### Appending aliases to ~/.bashrc ###
 cat << EOF >> ~/.bashrc
 
@@ -104,8 +107,11 @@ EOF
 
 source ~/.bashrc
 
-# To revert the changes, uncomment the line below or copy and paste it in your terminal without the # symbol
+# To revert the changes in Linux, uncomment the line below or copy and paste it in your terminal without the # symbol
 # cat /etc/skel/.bashrc > ~/.bashrc ; source ~/.bashrc ; rm -fr ~/.git-completion
+
+# To revert the changes in MacOS X, uncomment the line below or copy and paste it in your terminal without the # symbol
+# cat ~/.bashrc.bak > ~/.bashrc
 
 ```
 

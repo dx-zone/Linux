@@ -137,5 +137,5 @@ cat << EOF > ~/.vimrc
 set number
 syntax on
 colorscheme sublimemonokai
-EOFcp -a 
+EOF 
 ```

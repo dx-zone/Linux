@@ -75,6 +75,18 @@ alias conn='ssh -l root'
 alias sshin='ssh -l root'
 alias tree='tree -Cl'
 
+### Alias for SSH Tunnel
+### Variables to set the SSH Tunneling command
+TARGET='host.example.net'  # This is the server we want to SSH in to tunnel that server's port back to our local machine port
+LOCAL_HOST_PORT=4443  # Port number in our local machine that will map/tunnel back the remote server's port (HTTPS/443 in our example) in our local machine
+LOCAL_HOST_IP='localhost' # This could be localhost (127.0.0.1) or the IP of the local machine
+TARGET_SRC_PORT=443  # Port number of the remote server we want to tunnel
+SSH_USER='my_ssh_user_goes_here'
+
+### Creating an alias for the SSH Tunnel
+alias tunn="ssh -L $LOCAL_HOST_PORT:$LOCAL_HOST_IP:$TARGET_SRC_PORT -p 22 -l $SSH_USER $TARGET -N -f"
+
+
 EOF
 
 ### Appending git-completion and git-prompt & coloring to ~/.bashrc ###

@@ -132,7 +132,11 @@ source ~/.bashrc
 ### Set vi/vim color scheme like Sublime/Monokai
 
 ```bash
+# Debian based Linux
 sudo apt-get install vim-gui-common vim-runtime -y
+
+# Red Hat/CentOS based Linux
+sudo yum install vim-enhanced
 
 mkdir -p ~/.vim/colors
 

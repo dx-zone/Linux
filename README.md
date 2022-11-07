@@ -135,8 +135,27 @@ source ~/.bashrc
 # Debian based Linux
 sudo apt-get install vim-gui-common vim-runtime -y
 
-# Red Hat/CentOS based Linux
+# Red Hat/CentOS based Linux - VIM with colors
 sudo yum install vim-enhanced -y
+if [ -n "$BASH_VERSION" -o -n "$KSH_VERSION" -o -n "$ZSH_VERSION" ]; then
+  [ -x /usr/bin/id ] || return
+  ID=`/usr/bin/id -u`
+  #[ -n "$ID" -a "$ID" -le 200 ] && return  ### hash out this line
+  # for bash and zsh, only if no alias is already set
+  alias vi >/dev/null 2>&1 || alias vi=vim
+fi
+
+cat << EOF >> /etc/profile.d/vim.sh
+if [ -n "$BASH_VERSION" -o -n "$KSH_VERSION" -o -n "$ZSH_VERSION" ]; then
+  [ -x /usr/bin/id ] || return
+  ID=`/usr/bin/id -u`
+  #[ -n "$ID" -a "$ID" -le 200 ] && return  ### hash out this line
+  # for bash and zsh, only if no alias is already set
+  alias vi >/dev/null 2>&1 || alias vi=vim
+fi
+EOF
+source /etc/profile.d/vim.sh
+# ENDS Red Hat/CentOS based Linux - VIM with colors
 
 mkdir -p ~/.vim/colors
 

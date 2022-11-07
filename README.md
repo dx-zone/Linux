@@ -136,7 +136,7 @@ source ~/.bashrc
 sudo apt-get install vim-gui-common vim-runtime -y
 
 # Red Hat/CentOS based Linux
-sudo yum install vim-enhanced
+sudo yum install vim-enhanced -y
 
 mkdir -p ~/.vim/colors
 

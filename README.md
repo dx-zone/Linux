@@ -129,7 +129,7 @@ source ~/.bashrc
 
 
 
-### Set vi/vim color scheme like Sublime/Monokai
+### Set vi/vim color scheme like Sublime/Monokai and set Vim plugin manager with Fugitive & Tagbar Plugins (to enhanced VIM with Git and code editing features, highly recommended to work woth Cpython programming)
 
 ```bash
 # Debian based Linux
@@ -165,9 +165,45 @@ mkdir -p ~/.vim/colors
 curl https://raw.githubusercontent.com/erichdongubler/vim-sublime-monokai/master/colors/sublimemonokai.vim -o ~/.vim/colors/sublimemonokai.vim
 
 cat << EOF > ~/.vimrc
-set number
+" Enable syntax highlight
 syntax on
+
+" Set SublimeMonokai theme
 colorscheme sublimemonokai
+
+" Set line numbering
+set number
+
+" Setting up VIM to support Vundle Plugin Manager (https://github.com/VundleVim/Vundle.vim.git)
+" Highly recommended to work with Cpython programming for custom Python implementations
+set nocompatible              " be iMproved, required
+filetype off
+
+" set the runtime path to include Vundle and initialize
+set rtp+=~/.vim/bundle/Vundle.vim
+call vundle#begin()
+
+" let Vundle manage Vundle, required
+Plugin 'VundleVim/Vundle.vim'
+
+" The following are examples of differentsz formats supported.
+" Keep Plugin commands between vundle#begin/end.
+" plug on Git repo
+Plugin 'tpope/vim-fugitive'
+Plugin 'majutsushi/tagbar'
+" All of your Plugins must be added before this line
+call vundle#end()              " required
+filetype plugin indent on              " reqquired
+" Open tagbar automatically in C files, optional
+autocmd FileType c call tagbar#autoopen(0)
+" Open tagbar automatically in Python files, optional
+autocmd FileType python call tagbar#autoopen(0)
+" Show status bar, optional
+set laststatus=2
+" Set status as git status (branch), optional
+set statusline=%{FugitiveStatusline()}
+" Now execute in your shell the following command: vim +PluginInstall +qall
+
 EOF 
 ```
 

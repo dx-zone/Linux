@@ -202,9 +202,10 @@ autocmd FileType python call tagbar#autoopen(0)
 set laststatus=2
 " Set status as git status (branch), optional
 set statusline=%{FugitiveStatusline()}
-" Now execute in your shell the following command: vim +PluginInstall +qall
+" Now execute in your shell the following command in order to install Vundle and the plugins: vim +PluginInstall +qall
 
-EOF 
+EOF
+
 ```
 
 

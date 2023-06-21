@@ -129,7 +129,9 @@ source ~/.bashrc
 
 
 
-### Set vi/vim color scheme like Sublime/Monokai and set Vim plugin manager with Fugitive & Tagbar Plugins (to enhanced VIM with Git and code editing features, highly recommended to work woth Cpython programming)
+### Colorize and Highlight Your Code with VI/VIM Editor
+### Turn your VI/VIM Editor to Look Like SublimeText Editor/Visual Studio Code with Monokai Theme Like
+### Set vi/vim color scheme like Sublime/Monokai and set Vim plugin manager with Fugitive & Tagbar Plugins (to enhance VIM with Git and code editing features, highly recommended to work with Cpython programming)
 
 ```bash
 # Debian based Linux
@@ -207,6 +209,9 @@ set statusline=%{FugitiveStatusline()}
 
 EOF
 
+# Download and install VI/VIM Vundle Plugins
+git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim
+vim +PluginInstall +qall
 
 ```
 

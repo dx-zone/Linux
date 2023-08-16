@@ -167,14 +167,21 @@ mkdir -p ~/.vim/colors
 curl https://raw.githubusercontent.com/erichdongubler/vim-sublime-monokai/master/colors/sublimemonokai.vim -o ~/.vim/colors/sublimemonokai.vim
 
 cat << EOF > ~/.vimrc
-" Enable syntax highlight
-syntax on
+" The following settings can be disabled by adding a " symbol in front of the line
+syntax on                     " Enable syntax highlighting.
+set number                    " Set line numbering.
+filetype plugin indent on  " Enable file type based indentation.
+set autoindent             " Respect indentation when starting a new line.
+set expandtab              " Expand tabs to spaces. Essential in Python.
+set tabstop=4                 " Number of spaces tab is counted for.
+set shiftwidth=4              " Number of spaces to use for autoindent.
+set backspace=2               " Fix backspace behavior on most terminals.
+"colorscheme murphy           " Set colorscheme to murphy.
+colorscheme sublimemonokai    " Set colorscheme to Monokai theme.
+set list                      " Toggle list mode - to see special characters using specific symbols, including space characters
+set listchars=tab:→\ ,eol:¶   " Customize the characters used for displaying tabs, end-of-lines, and other special characters
+set listchars+=space:.        " Set space character - to display white spaces as . (periods)
 
-" Set SublimeMonokai theme
-colorscheme sublimemonokai
-
-" Set line numbering
-set number
 
 " Setting up VIM to support Vundle Plugin Manager (https://github.com/VundleVim/Vundle.vim.git)
 " Highly recommended to work with Cpython programming for custom Python implementations
